@@ -6,7 +6,7 @@ export default async function sendEmail({ to, subject, html }: any) {
     try {
         await sgMail.send({ 
             to, 
-            from: 'richardcasinillohph@gmail.com', // hardcoded to test
+            from: 'richardcasinilloph@gmail.com', // hardcoded to test
             subject, 
             html 
         });
