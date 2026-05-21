@@ -1,17 +1,11 @@
-import nodemailer from 'nodemailer';
-import config from '../config.json';
+import sgMail from '@sendgrid/mail';
 
-export default async function sendEmail({ to, subject, html, from = config.emailFrom }: any) {
+sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
+
+export default async function sendEmail({ to, subject, html, from = process.env.EMAIL_FROM }: any) {
     try {
-        const transporter = nodemailer.createTransport({
-            ...config.smtpOptions,
-            connectionTimeout: 5000,
-            greetingTimeout: 5000,
-            socketTimeout: 5000
-        } as any);
-        await transporter.sendMail({ from, to, subject, html });
+        await sgMail.send({ to, from, subject, html });
     } catch (error) {
         console.error('Email sending failed:', error);
-        // Don't throw - allow registration to succeed even if email fails
     }
 }
