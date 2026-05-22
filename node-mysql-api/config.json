@@ -1,9 +1,9 @@
 {
     "database": {
-        "host": "mysql-26e7c5b7-richardcasinilloph-b89a.h.aivencloud.com",
-        "port": 16351,
-        "user": "avnadmin",
-        "password": "AVNS_KpJROFubSTpFs--tSKR",
+        "host": "153.92.15.31",
+        "port": 3306,
+        "user": "U875409848_2026",
+        "password": "b$Nkxa*G9",
         "database": "defaultdb",
         "ssl": {
             "rejectUnauthorized": false
