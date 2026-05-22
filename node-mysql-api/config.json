@@ -9,4 +9,14 @@
             "rejectUnauthorized": false
         }
     },
-    
+     "secret": "SUPER_SECRET_KEY_REPLACE_ME_IN_PRODUCTION",
+    "emailFrom": "americo.skiles48@ethereal.email",
+    "smtpOptions": {
+        "host": "smtp.ethereal.email",
+        "port": 587,
+        "auth": {
+            "user": "americo.skiles48@ethereal.email",
+            "pass": "xwHWhjvwbSDTPkPuYA"
+        }
+    }
+}
